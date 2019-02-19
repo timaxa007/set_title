@@ -1,5 +1,6 @@
 package timaxa007.set_title;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
@@ -17,6 +18,7 @@ public class SetTitleMod {
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		Config.init(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(new Events());
 	}
 
 }

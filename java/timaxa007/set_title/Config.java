@@ -10,7 +10,7 @@ import net.minecraftforge.common.config.Configuration;
 public class Config {
 
 	public static Configuration config;
-	public static final String categoryGui = "gui";
+	public static final String categoryGui = "window";
 
 	public static String title;
 
@@ -21,11 +21,9 @@ public class Config {
 	}
 
 	public static void syncConfig() {
-		title = config.get(categoryGui, "scale", "Minecraft 1.7.10 Custom Title").getString();
-		if (config.hasChanged()) {
-			Display.setTitle(title);
-			config.save();
-		}
+		title = config.get(categoryGui, "Custom Title", "Minecraft 1.7.10 Custom Title").getString();
+		Display.setTitle(title);
+		if (config.hasChanged()) config.save();
 	}
 
 }
