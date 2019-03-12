@@ -10,7 +10,7 @@ public class SetTitleMod {
 	public static final String
 	MODID = "set_title",
 	NAME = "Set Title Mod",
-	VERSION = "1.0";
+	VERSION = "1.1";
 
 	@Mod.Instance(MODID)
 	public static SetTitleMod instance;
