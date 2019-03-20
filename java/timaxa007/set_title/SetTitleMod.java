@@ -10,14 +10,14 @@ public class SetTitleMod {
 	public static final String
 	MODID = "set_title",
 	NAME = "Set Title Mod",
-	VERSION = "1.1";
+	VERSION = "1.2";
 
 	@Mod.Instance(MODID)
 	public static SetTitleMod instance;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		Config.init(event.getSuggestedConfigurationFile());
+		//Config.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new Events());
 	}
 
